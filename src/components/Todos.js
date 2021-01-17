@@ -6,16 +6,18 @@ import PropTypes from 'prop-types';
 
 
 class Todos extends Component {
-      
+    constructor(props)
+{
+    super(props)
+
+this.props=props}      
     render () {
         return this.props.todos.map((todo) => (
-           <TodoItem key={todo.id} todo={todo} markComplete={this.props.markComplete}/>
+           <TodoItem key={todo.id} todo={todo} mark={this.props.markComplete}/>
         ))
     }
 }
 ///// PropTypes
-Todos.propTypes = {
-    todos: PropTypes.array.isRequired
-}
-
+// Todos.propTypes = {
+  
 export default Todos;
